@@ -1,0 +1,464 @@
+/*
+=== COLOR ===
+blue:  #1f88b6
+red:  #c22039
+grey:  #696969
+red-hover: #8C0E22
+*/
+
+* {
+   	margin: 0;
+	padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+	font-size: 1.8rem;
+	font-family: 'PT Sans', 'Courier New', 'Arial', sans-serif;
+	-ms-text-size-adjust: 100%; 
+	-webkit-text-size-adjust: 100%;
+	letter-spacing: 0.4px;
+    line-height: 1.6; 
+}
+
+.wrapper {
+	width:100%;
+	min-width:480px;
+	margin:0 auto;
+	min-height: calc(100vh - 20px);   /* sticky footer*/
+	background-color: #449cc2;
+}
+
+footer {
+	width:100%;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #449cc2;
+	color: white;
+}
+
+.name__game {
+	margin: 0 auto;
+    color: #c22039;
+    text-align: center;
+	font-weight: 800;
+}
+
+.content {
+	width: 100%;
+	background-color: #449cc2;
+	padding:20px 0;
+}
+
+/*=== GAME RULES - FIRST BLOCK GAME ===*/
+
+.rules__game {
+	padding: 20px 0;
+    margin: 0 auto;
+	background-color: white;
+	/* margin-top: 40px; */
+    margin-bottom: 40px;
+    width: 600px;
+}
+
+.rules__content {
+	max-width: 500px;
+    margin: 0 auto;
+}
+
+.rules__heading {
+	text-align: center;
+    padding: 20px 0 10px 0;
+    color:  #1f88b6;
+   	letter-spacing: 1.1px;
+}
+
+/*=== Game menegement includes
+ blocks card select, difficulty__select, 
+ button start game or new game, 
+ text content  ===*/ 
+
+.game__management {
+	margin: 0 auto;
+}
+
+.management__cards__select,
+.management__difficulty__select {
+    width: 190px;
+    float: left;
+	background-color: #c22039;
+	margin-left: 20px;
+}
+
+.cards__select__heading,
+.difficulty__select__heading {
+	height: 30px;
+    font-weight: 400;
+    padding: 10px;
+    color: white;
+    background-color: #c22039;
+    box-shadow: 0 0 0 1px #696969;
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	border: 1px solid white;
+	cursor: pointer;
+}
+
+.cards__select__heading:hover,
+.difficulty__select__heading:hover {
+	background-color: #8C0E22;
+}
+
+.cards__select {
+	display: block;
+	cursor: pointer;
+}
+
+.cards__select.close {	
+	display: none;
+}
+
+.cards__select__block {
+	display: flex;
+    align-items: center;
+    padding: 10px;
+    line-height: 1.0;
+	cursor: pointer;
+	height: 52px;
+}
+.separator {
+	width:60%;
+	height:1px;
+	background-color: #fff;
+}
+
+.cards__select__block:hover {
+	background-color: #8C0E22;
+}
+
+.cards__select__block__img {
+	padding-right: 10px;
+}
+
+.cards__select__img {
+	width: 50px;
+    background-color: white;
+    box-shadow: 0 0 0 1px #696969;
+}
+
+.cards__select__block__name,
+.difficulty__select__level__name {
+	font-size: 2.0rem;
+	color: white;
+}
+
+/*=== Select difficult level ===*/ 
+
+.difficulty__select {
+	display: block;
+	cursor: pointer;
+}
+
+.difficulty__select.close {		/* implementation of a method toggle to display selection items */
+	display: none;
+}
+
+.difficulty__select__level {
+	display: flex;
+    align-items: center;
+    padding: 26px 20px;
+    line-height: 1.0;
+    cursor: pointer;
+}
+
+.difficulty__select__level:hover {
+	background-color: #8C0E22;
+}
+
+/*=== Button play and start game ===*/ 
+
+.management__start__game {
+	text-align: right;
+	padding: 0px 20px 20px 20px;
+}
+
+.management__play__game {
+	text-align: center;
+	padding: 20px;
+}
+
+.management__play__button,
+.management__start__button {
+	width: 160px;
+	height: 50px;
+    padding: 10px;
+    color: white;
+    background-color: #c22039;
+    border: none;
+    box-shadow: 0 0 0 1px #696969;
+    font-size: 2.2rem;
+    letter-spacing: 1.1px;
+	border: 1px solid white;
+	font-family: 'PT Sans', 'Courier New', 'Arial', sans-serif;
+	cursor: pointer;
+}
+
+.management__play__button:hover,
+.management__start__button:hover {
+	background-color: #8C0E22;
+}
+
+
+.conteiner { 
+	max-width: 840px;
+	margin: 0 auto;
+	 background-color: #fff; 
+}
+
+.rules__game {
+	padding: 20px 0;
+    margin: 0 auto;
+	background-color: white;
+    width: 600px;
+}
+
+.start__game {
+	padding: 20px 0;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.start__content {
+	clear: both;
+    text-align: center;
+    padding: 40px;
+}
+
+.rules__description__play {
+	list-style: none;
+}
+
+.rules__content {
+	max-width: 500px;
+    margin: 0 auto;
+}
+
+.rules__heading {
+	text-align: center;
+    padding: 20px 0 10px 0;
+    color:  #1f88b6;
+   	letter-spacing: 1.1px;
+}
+
+.form-registration {
+	width: 60%;
+    display: flex;
+	justify-content: space-between;
+	float: right;
+	margin-right: 20px;
+	margin-top: 12px;
+}
+
+.form-registration fieldset {
+	padding: 20px;
+    width: 60%;
+    border-color: #c22039;
+}
+
+
+.form-registration input[type="text"],
+.form-registration input[type="email"] {
+	width: 300px;
+    height: 10px;
+    padding: 10px;
+}
+
+.form-registration p {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0;
+    font-size: 1.6rem;
+}
+
+.submit {
+	margin: 132px 60px 0 0;
+}
+
+/*=== Game stage ===*/ 
+
+.game__play {
+	clear: both;
+	padding: 20px 0;
+}
+
+.game__play__first {
+	padding: 0;
+}
+
+.game__play__wrapper {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.game__play__cards {
+	display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; 
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; 
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; 
+}
+
+.game__play__card {
+	margin: 5px;
+	box-sizing: border-box;
+}
+
+
+/*=== Main block with card. Animation cards ===*/ 
+
+.game__play__card_inner {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.game__play__card_outside {
+	position:absolute;
+	width: 200px;
+    height: 266px;
+	z-index: 2;
+	background: url(../img/card-outside.png) 50% 50% no-repeat;
+	background-size: cover;
+	box-shadow: 0 0 0 1px #696969;
+}
+
+.game__play__card_inside {
+	position: relative;
+	background-color: white;
+	box-shadow: 0 0 0 1px #696969;
+}
+
+.game__play__card_inner.flipped .game__play__card_outside {
+	transition: all 0.4s ease;
+	-webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.game__play__card_inner.flipped .game__play__card_inside {
+	transition: all 0.4s ease;
+	-webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    z-index: 3;
+}
+
+.removeCard {
+	transition: all 0.3s ease;
+	opacity: 0;
+}
+
+/*=== Position cards difficult level ===*/ 
+
+.level-10 {
+	display: block;
+	width: 140px;
+	height: 140px;
+}
+
+.level-18 {
+	display: block;
+	width: 120px;
+	height: 120px;
+}
+
+.level-40 {
+	display: block;
+	width: 90px;
+	height: 90px;
+}
+
+.game__play__card_outside img {
+	display: block;
+    max-width: 100%;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 0 0 1px #696969;
+}
+
+
+.game__play__card_inside img {
+	display: block;
+    max-width: 100%;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 0 0 1px #696969;
+}
+
+
+#add__content {
+	width: 600px;
+    margin-left: 10px;
+    height: 40px;
+    text-align: center;
+    color: red;
+    font-size: 2.0rem;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.close {	
+	display: none;
+}
+
+.remove {
+	display: none;
+}
+
+.add {
+	display: block;
+}
+
+.disabled {
+	width: 420px;
+	height:60px;
+	position: absolute;;
+}
+
+.table__players {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table__players table {
+	margin: 40px;
+	border-collapse: collapse; 
+}
+
+.table__players caption {
+	color: #1f88b6;
+    font-size: 2.6rem;
+}
+
+table th, table td {
+	padding: 10px;
+    border: 1px solid grey;
+    font-size: 1.4rem;
+}

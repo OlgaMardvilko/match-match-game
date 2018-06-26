@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Match-Match Game</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Memory is a game where you find pairs">
+	<meta name="Keywords" content="Memory, game memory, find pairs">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans|Ubuntu:500" rel="stylesheet">
+	<script Defer type='text/javascript' src='js/game.js'></script>
+</head>
+<body>
+	<div class="wrapper">
+		<main class="content">
+				<div class="rules__game" id="rules__game">
+						<h1 class="name__game">Welcom to the Match-Match Game!</h1>
+						<div class="rules__content" id="game__start__content">
+							<h2 class="rules__heading">How to play</h2>
+							<p class="rules__description">Memory is a counter game in which an object must find pairs.</p>
+							<p class="rules__description">When the game begins, all pictures are hidden.</p>
+							<h2 class="rules__heading">To play</h2>
+							<ol class="rules__description__play">
+								<li>Select two cards to try to match the pictures.</li>
+								<li>If you match the pictures you can go again.</li>
+								<li>If they don't match it is the computer turn them</li>
+								<li>The player that finds all pairs wins!</li>
+								<li>Have Fun!</li>
+							</ol>
+						</div>
+							
+						<div class="management__play__game">
+							<button class="management__play__button" id="button__play">Play</button>
+						</div>
+				</div>
+				
+				<!-- <div class="container__start__game remove" id="container__start__game">	 -->
+				    <div class="game__management remove" id="game__management">
+					  <div class="disabled remove" id="disabled"></div>
+						<div class="management__cards__select">
+							<h3 class="cards__select__heading" id="cards__select__heading">Skirt Cards </h3>
+							<ul class="cards__select" id="cards__select">
+								<li class="cards__select__block" data-select="cardsAlphabet">
+									<span class="cards__select__block__img">
+										<img src="img/select-cards/alphabet.jpg" alt="alphabets" class="cards__select__img">
+									</span>
+									<span class="cards__select__block__name" > Alphabets </span>
+								</li>
+								<li class="cards__select__block" data-select="cardsAnimal">
+									<span class="cards__select__block__img">
+										<img src="img/select-cards/animal.jpg" alt="animals" class="cards__select__img">
+									</span>
+									<span class="cards__select__block__name" > Animals </span>
+								</li>
+								
+								<li class="cards__select__block" data-select="cardsArchitecture">	
+									<span class="cards__select__block__img">						
+										<img src="img/select-cards/architecture.jpg" alt="architecturies" class="cards__select__img">
+									</span>
+									<span class="cards__select__block__name" > Architecture </span>
+								</li>
+							</ul>
+						</div>
+						
+						<div class="management__difficulty__select">
+							<h3 class="difficulty__select__heading" id="difficulty__select__heading">Game Difficulty</h3>
+							<ul class="difficulty__select" id="difficulty__select">
+								<li class="difficulty__select__level" data-level="10">
+									<span class="difficulty__select__level__name" >Low (5 x 2)</span>
+								</li>
+								<li class="difficulty__select__level" data-level="18">
+									<span class="difficulty__select__level__name" >Medium (6 x 3)</span>
+								</li>
+								<li class="difficulty__select__level" data-level="40">
+									<span class="difficulty__select__level__name" >Height (8 x 5)</span>
+								</li>
+							</ul>
+						</div>
+
+						<div id="add__content"></div>
+						<div class="management__start__game" id="button__start">
+							<button class="management__start__button" id="management__start__button">Start</button>
+						</div>
+						<form name="form-registration" method="post" action="#" class="form-registration" id="form-registration" onsubmit="alert('submit!');return false">	
+						  <fieldset>
+							<p class="form-item">
+								<label for="firstName">First name:</label>
+								<input type="text" id="firstName" autocomplete="firstName" placeholder="your first name*" required>
+							</p>
+							<p>
+								<label for="lastName">Last name:</label>
+								<input type="text" id="lastName" autocomplete="lastName" placeholder="your last name*" required>
+							</p>
+							<p class="form-item"> 
+								<label for="email">Email:</label>
+								<input type="email" id="email" autocomplete="email" placeholder="your email*"required >
+							</p>
+						  </fieldset>
+						  <input type="submit" value="Add profile" class="management__play__button submit" id="add_profile">
+						</form> 	
+						
+						<div class="management__start__game remove" id="button__new__game">
+							<button class="management__start__button" id="management__start__button">New Game</button>
+						</div>
+				    </div>
+		             <div class="start__game remove" id="start__game">
+						<!-- <h1 class="name__game">Match-Match Game</h1> -->
+						<div class="start__content" id="start__content">
+							<h2 class="rules__heading">How to start</h2>
+							<ol class="rules__description__play">
+								<li>Choose skirt cards and game difficulty.</li>
+								<li>Complete your information on the form.</li>
+								<li>Click start.</li>
+							</ol>
+						</div>
+					</div>	
+				<!-- </div> -->
+			<div class="conteiner" id="container">
+
+				<div class="game__play game__play__first" id="game_play">
+					<!-- <div class="game__play__wrapper">
+						<div class="game__play__cards">
+							<div class="game__play__card game__play__card-1">
+								<div class="game__play__card_inner">
+									<span class="game__play__card_outside">
+									</span>
+									<span class="game__play__card_inside">
+										<img src="img/alphabet/abc-1.png">
+									</span>
+								</div>
+							</div>
+							<div class="game__play__card game__play__card-2">
+								<div class="game__play__card_inner">
+									<span class="game__play__card_outside">
+									</span>
+									<span class="game__play__card_inside">
+										<img src="img/alphabet/abc-2.png">
+									</span>
+								</div>
+							</div>
+							<div class="game__play__card game__play__card-3">
+								<div class="game__play__card_inner">
+									<span class="game__play__card_outside">
+									</span>
+									<span class="game__play__card_inside">
+										<img src="img/alphabet/abc-3.png">
+									</span>
+								</div>
+							</div>
+							<div class="game__play__card game__play__card-4">
+								<div class="game__play__card_inner">
+									<span class="game__play__card_outside">
+									</span>
+									<span class="game__play__card_inside">
+										<img src="img/alphabet/abc-4.png">
+									</span>
+								</div>
+							</div>
+							<div class="game__play__card game__play__card-5">
+								<div class="game__play__card_inner">
+									<span class="game__play__card_outside">
+									</span>
+									<span class="game__play__card_inside">
+										<img src="img/alphabet/abc-5.png">
+									</span>
+								</div>
+							</div>
+							<div class="game__play__card game__play__card-6">
+								<div class="game__play__card_inner">
+									<span class="game__play__card_outside">
+									</span>
+									<span class="game__play__card_inside">
+										<img src="img/alphabet/abc-6.png">
+									</span>
+								</div>
+							</div>
+							<div class="game__play__card game__play__card-7">
+								<div class="game__play__card_inner">
+									<span class="game__play__card_outside">
+									</span>
+									<span class="game__play__card_inside">
+										<img src="img/alphabet/abc-7.png">
+									</span>
+								</div>
+							</div>
+							<div class="game__play__card game__play__card-8">
+								<div class="game__play__card_inner">
+									<span class="game__play__card_outside">
+									</span>
+									<span class="game__play__card_inside">
+										<img src="img/alphabet/abc-7.png">
+									</span>
+								</div>
+							</div>
+							<div class="game__play__card game__play__card-9">
+								<div class="game__play__card_inner">
+									<span class="game__play__card_outside">
+									</span>
+									<span class="game__play__card_inside">
+										<img src="img/alphabet/abc-7.png">
+									</span>
+								</div>
+							</div>
+							<div class="game__play__card game__play__card-10">
+								<div class="game__play__card_inner">
+									<span class="game__play__card_outside">
+									</span>
+									<span class="game__play__card_inside">
+										<img src="img/alphabet/abc-7.png">
+									</span>
+								</div>
+							</div>
+						</div>
+				 	</div> -->
+
+				</div>
+
+			  <!-- </div> -->
+			</div>
+		</main>
+	</div>
+	<footer>
+		<!-- Match-Match game -->
+	</footer>
+
+</body>
+</html>
